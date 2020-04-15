@@ -13,7 +13,7 @@ class DynamicArray {
   }
 
   isEmpty() {
-    return this.size === 0;
+    return this.length === 0;
   }
 
   get(index) {
@@ -21,6 +21,7 @@ class DynamicArray {
   }
 
   set(index, elem) {
+    if (this.get(index) === undefined) throw new Error('Only existing elements can be set');
     this.arr[index] = elem;
   }
 
