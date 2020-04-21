@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 
-import DArray from './data-structures/arrays/dynamic-array';
+import DynamicArray from './data-structures/dynamic-array';
+import DoublyLinkedList from './data-structures/linked-list';
 
-const exampleArray = new DArray();
+const exampleArray = new DynamicArray();
 exampleArray.add({
   name: 'my name',
   age: 31,
@@ -40,3 +41,12 @@ console.log('Removed element:', removedElem);
 const otherElem = exampleArray.get(0);
 console.log('Index of elem at position 0:', exampleArray.indexOf(otherElem));
 console.log('Array contains elem at position 0:', exampleArray.contains(otherElem));
+
+const linkedList = new DoublyLinkedList();
+linkedList.addFirst('element');
+console.log(linkedList);
+console.log(linkedList.head === linkedList.tail);
+linkedList.addFirst('second element');
+linkedList.addLast('third and last element');
+console.log(linkedList);
+console.log(linkedList.head === linkedList.tail);
